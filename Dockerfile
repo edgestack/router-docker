@@ -15,6 +15,14 @@ RUN mkdir /var/run/sshd
 # permit root ssh
 RUN sed -i -e '/^PermitRootLogin/s/^.*$/PermitRootLogin yes/' /etc/ssh/sshd_config
 
+# meta information of this container
+LABEL org.label-schema.name="Router for SONA" \
+      org.label-schema.description="Lightweight router used as a SONA gateway" \
+      org.label-schema.usage="https://github.com/sonaproject/router-docker" \
+      org.label-schema.url="https://github.com/sonaproject/router-docker" \
+      org.label-scheme.vendor="SK Telecom" \
+      org.label-schema.schema-version="1.0"
+
 # accept SSH connection
 EXPOSE 22
 
