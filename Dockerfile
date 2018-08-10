@@ -2,7 +2,7 @@ FROM alpine:latest
 MAINTAINER Jian Li <gunine@sk.com>
 
 # add ssh and iptables
-RUN apk add --no-cache openssh iptables ip6tables iproute2 drill
+RUN apk add --no-cache openssh iptables ip6tables iproute2 drill curl
 
 # add entrypoint script
 COPY docker-entrypoint.sh /runssh.sh
